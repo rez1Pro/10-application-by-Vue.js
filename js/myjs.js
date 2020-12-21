@@ -1,2 +1,3 @@
 export let fname = "Rezwan";
-export let lname = "Hossain";
+let lname = "Hossain";
+export default lname;

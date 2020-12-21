@@ -1,3 +1,3 @@
-import { fname, lname } from "./js/myjs.js";
+import myjs, { fname } from "./js/myjs.js";
 
-console.log(fname);
+console.log(fname, myjs);
