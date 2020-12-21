@@ -11,7 +11,7 @@
      <div class="container">
           hello world
      </div>
-     <script src="js/App.js"></script>
+     <script src="App.js"></script>
 </body>
 
 </html>
