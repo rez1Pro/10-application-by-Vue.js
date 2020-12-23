@@ -1,12 +1,19 @@
 <template>
-  <calender />
+  <Header />
+  <div class="w-full flex">
+    <NameList />
+  </div>
 </template>
+
 <script>
-import calender from "./components/calender.vue";
+import Header from "./components/Header.vue";
+import NameList from "./components/NameList.vue";
 export default {
-  name: "App",
   components: {
-    calender,
+    Header,
+    NameList,
   },
 };
 </script>
+
+<style></style>
