@@ -1,17 +1,18 @@
 <template>
   <Header />
   <div class="w-full flex">
-    <NameList />
+    <Calendar />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import NameList from "./components/NameList.vue";
+import Calendar from "./components/Calendar.vue";
+//import NameList from "./components/NameList.vue";
 export default {
   components: {
     Header,
-    NameList,
+    Calendar,
   },
 };
 </script>
