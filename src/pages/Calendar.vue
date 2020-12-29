@@ -2,7 +2,6 @@
   <div class="m-auto">
     <h1 class="text-2xl text-green-600 font-serif text-center">Vue Calendar</h1>
     <hr />
-
     <section class="font-bold justify-between flex my-3 mx-4">
       <h1>{{ month }}</h1>
       <h1>{{ year }}</h1>
