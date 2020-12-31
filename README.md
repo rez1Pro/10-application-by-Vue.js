@@ -1,5 +1,13 @@
-<img src="https://v3.vuejs.org/logo.png" width='250px'></img>
-<h1> 10 Application with Vue-3 </h1>
+<div style="text-align:center">
+<img src="https://v3.vuejs.org/logo.png" width='200px'></img>
+<img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.ce301590451472adad5301c69f9054af.svg" width='250px'></img>
+<h2> Vue-3 & Tailwind Css</h2>
+<br>
+<br>
+<br>
+<br>
+</div>
+<h1> 10 Applications with Vue-3 & Tailwind </h1>
 <h3>1 . Name-List Application</h>
 <h3>2 . Calendar Application </h>
 <h3>3 . Markdown Application</h>
