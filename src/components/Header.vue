@@ -17,6 +17,7 @@ export default {
         { title: "List", to: "/name-list" },
         { title: "Calendar", to: "/calendar" },
         { title: "Markdown", to: "/markdown" },
+        { title: "Sliders", to: "/sliders" },
       ],
     };
   },

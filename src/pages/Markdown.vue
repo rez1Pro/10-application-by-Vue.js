@@ -18,7 +18,7 @@
 
 <script>
 import marked from "marked";
-import debounce from "../mixins/debounce";
+import debounce from "../utilities/mixins/debounce";
 export default {
   mixins: [debounce],
   data() {

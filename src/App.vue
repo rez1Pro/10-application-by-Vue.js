@@ -1,8 +1,6 @@
 <template>
   <Header />
-  <div class="w-full flex">
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
