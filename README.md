@@ -1,9 +1,7 @@
-<div style="text-align:center">
+<div align="center">
 <img src="https://v3.vuejs.org/logo.png" width='200px'></img>
 <img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.ce301590451472adad5301c69f9054af.svg" width='250px'></img>
 <h2> Vue-3 & Tailwind Css</h2>
-<br>
-<br>
 <br>
 <br>
 </div>
