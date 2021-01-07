@@ -5,6 +5,7 @@
     <section class="flex m-auto w-10/12 h-screen">
       <article class="w-1/2">
         <textarea
+          ref="input"
           placeholder="Type Some Text Here....."
           class="h-screen border border-gray-700 w-full"
           :value="text"
@@ -30,6 +31,9 @@ export default {
     markedText() {
       return marked(this.text);
     },
+  },
+  mounted() {
+    this.$refs.input.focus();
   },
   methods: {
     update(e) {

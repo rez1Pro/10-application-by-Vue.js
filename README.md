@@ -10,3 +10,5 @@
 <h3>2 . Calendar Application </h>
 <h3>3 . Markdown Application</h>
 <h3>4 . Slider Application</h>
+<h3>5 . Login with Google , Login by Phone number verifications , Login by gmail account and password</h>
+<h3>Alert system are include</h3>

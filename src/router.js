@@ -1,8 +1,8 @@
-import Calendar from "./pages/Calendar.vue";
-import NameList from "./pages/NameList.vue";
-import Home from "./pages/Home.vue";
-import Markdown from "./pages/Markdown.vue";
-import Sliders from "./pages/Sliders.vue";
+import Calendar from "./apps/Calendar.vue";
+import NameList from "./apps/NameList.vue";
+import Home from "./apps/Home.vue";
+import Markdown from "./apps/Markdown.vue";
+import Sliders from "./apps/Sliders.vue";
 
 export const routes = [
      { path: '/', component: Home },

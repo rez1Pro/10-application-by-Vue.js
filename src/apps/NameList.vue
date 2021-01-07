@@ -16,13 +16,14 @@
         <br />
         <form @submit.prevent="addNew">
           <input
+            ref="input"
             class="border rounded-sm"
             type="text"
             v-model="newName"
             placeholder="Enter a name...."
           />
           <button
-            class="border ml-2 bg-green-300 rounded-sm text-white"
+            class="border ml-2 p-1 bg-green-300 rounded-tr-2xl rounded-bl-2xl text-white"
             type="submit"
             :disabled="!newName"
           >
@@ -48,7 +49,9 @@ export default {
       return this.names.length;
     },
   },
-
+  mounted() {
+    this.$refs.input.focus();
+  },
   methods: {
     addNew: function () {
       if (this.newName != "") {
@@ -56,7 +59,6 @@ export default {
         this.newName = "";
       }
     },
-
     deleteItem: function (index) {
       this.names = this.names.filter((user, i) => i != index);
     },
