@@ -12,3 +12,4 @@
 <h3>4 . Slider Application</h>
 <h3>5 . Login with Google , Login by Phone number verifications , Login by gmail account and password using firebase</h>
 <h3>6 .Alert system are included for alerting</h3>
+<h3>7 . Successfully create a calculator Application</h3>
