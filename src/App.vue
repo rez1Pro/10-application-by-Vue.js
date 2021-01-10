@@ -1,7 +1,9 @@
 <template>
   <Header :authCheck="isLoggin" @login-button="showModel = true" />
   <router-view></router-view>
-  <Login v-if="showModel" @close-login-model="showModel = false" />
+  <teleport to="#login-modal">
+    <Login v-if="showModel" @close-login-model="showModel = false" />
+  </teleport>
 </template>
 <script>
 import Header from "./components/Header.vue";

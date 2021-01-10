@@ -22,7 +22,7 @@ import firebase from "../../utilities/firebase";
 export default {
   data() {
     return {
-      phone: "+8801729550898",
+      phone: "+8801797840513",
       code: "",
       isCodeSend: false,
     };
