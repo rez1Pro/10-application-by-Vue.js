@@ -116,7 +116,8 @@
   </section>
 </template>
 <script>
-import { onMounted, onUnmounted, ref } from "vue";
+import useWindowEvent from "../utilities/hooks/useWindowEvent";
+import { ref } from "vue";
 export default {
   setup() {
     const previousNums = ref("");
@@ -179,8 +180,7 @@ export default {
      * Keyboard  control system register
      */
     const handleKeydown = (e) => pressed(e.key);
-    onMounted(() => window.addEventListener("keydown", handleKeydown));
-    onUnmounted(() => window.removeEventListener("keydown", handleKeydown));
+    useWindowEvent("keydown", handleKeydown);
     // Needed will be passed by here
     return { currentNums, previousNums, currentOperator, pressed };
   },
