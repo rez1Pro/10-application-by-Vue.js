@@ -37,6 +37,8 @@
 					{ title: 'Sliders', to: '/sliders' },
 					{ title: 'Calculator', to: '/calculator' },
 					{ title: 'Modals', to: '/reuseable-modals' },
+					{ title: 'Chat', to: '/realtime-chatting' },
+					{ title: 'Crud', to: '/user-crud' },
 				],
 			};
 		},

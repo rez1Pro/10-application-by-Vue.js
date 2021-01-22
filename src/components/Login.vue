@@ -61,7 +61,7 @@ import firebase from "../utilities/firebase";
 export default {
   data() {
     return {
-      email: "rezwanhossainsajib@gmail.com",
+      email: "programmerrezwan@gmail.com",
       password: "123456",
       isLoading: false,
     };
@@ -85,7 +85,7 @@ export default {
             this.password = "";
             this.isLoading = false;
             this.close();
-            window.toastr.error("Congratulations! You are successfully Logged In!");
+            window.toastr.success("Congratulations! You are successfully Logged In!");
           }
         })
         .catch((error) => {

@@ -1,19 +1,33 @@
+// Toastr import here
+// axios implementation
+import axios from 'axios'
+import toastr from "toastr"
 import { createApp } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router'
+// Vuex
+import { createStore } from 'vuex'
 import App from './App.vue'
-
+// Tailwind css and personal css are include here
+import './assets/index.css'
 //router
 import { routes } from './router'
-import { createRouter, createWebHistory } from 'vue-router'
+import storage from './store/storage'
 
+window.axios = axios;
+
+// route implements
 const router = createRouter({
      history: createWebHistory(),
      routes,
 });
-createApp(App).use(router).mount('#app');
-// Tailwind css and personal css are include here
-import './assets/index.css';
-// Toastr import here
-import toastr from "toastr";
+
+// Vuex implements
+const store = createStore(storage);
+const app = createApp(App);
+app.use(router);
+app.use(store);
+app.mount('#app');
+
 window.toastr = toastr;
 window.toastr.options = {
      "closeButton": true,
