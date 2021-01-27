@@ -10,11 +10,11 @@ import App from './App.vue'
 // Tailwind css and personal css are include here
 import './assets/index.css'
 //router
-import { routes } from './router'
+import { routes } from './routes'
 import storage from './store/storage'
 
 window.axios = axios;
-
+axios.defaults.baseURL = process.env.VUE_APP_API_URL;
 // route implements
 const router = createRouter({
      history: createWebHistory(),
@@ -27,6 +27,20 @@ const app = createApp(App);
 app.use(router);
 app.use(store);
 app.mount('#app');
+
+// Middleware implementation
+router.beforeEach((to) => {
+     const isLoggedIn = store.state.userInfo.isLoggedIn;
+     if (to.meta.requireAuth && !isLoggedIn ) {
+          store.commit("setShowLoginModal" , true);
+          return {
+               path: "/",
+               query : {redirect : to.fullPath}
+          }
+     } else {
+          return true;
+     }
+});
 
 window.toastr = toastr;
 window.toastr.options = {

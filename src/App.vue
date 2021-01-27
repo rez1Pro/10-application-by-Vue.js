@@ -1,8 +1,8 @@
 <template>
-  <Header :authCheck="isLoggin" @login-button="openModal" />
+  <Header />
   <router-view></router-view>
   <teleport to="#login-modal">
-    <Login v-if="showModal" @close-login-model="showModal = false" />
+    <Login />
   </teleport>
 </template>
 <script>
@@ -12,28 +12,18 @@ import firebase from "./utilities/firebase";
 
 export default {
   components: { Login, Header },
-  data() {
-    return {
-      showModal: false,
-      isLoggin: false,
-    };
-  },
   mounted() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.$store.commit("setAuthenticatedUser", user);
-        this.isLoggin = this.$store.state.userInfo.isLoggedIn;
-        this.showModal = false;
+        this.$store.commit("setIsLoggedIn", true);
+        this.$store.commit("setShowLoginModal", false);
       } else {
-        this.isLoggin = false;
-        this.showModal = console.log(this.$store.getters);
+        this.$store.commit("setAuthenticatedUser", {});
+        this.$store.commit("setIsLoggedIn", false);
+        this.$store.commit("setShowLoginModal", true);
       }
     });
-  },
-  methods: {
-    openModal() {
-      this.showModal = true;
-    },
   },
 };
 </script>

@@ -24,11 +24,11 @@
             Modal-3
           </button>
         </div>
-        <Modal v-if="isOpenModal1" @isClose="isOpenModal1 = false"> </Modal>
-        <Modal header="Header-2" v-if="isOpenModal2" @isClose="isOpenModal2 = false">
+        <Modal v-if="isOpenModal1" @close="isOpenModal1 = false"> </Modal>
+        <Modal header="Header-2" v-if="isOpenModal2" @close="isOpenModal2 = false">
           I am content-2
         </Modal>
-        <Modal header="Header-3" v-if="isOpenModal3" @isClose="isOpenModal3 = false">
+        <Modal header="Header-3" v-if="isOpenModal3" @close="isOpenModal3 = false">
           I am content-3
         </Modal>
       </div>

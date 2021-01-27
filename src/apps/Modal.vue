@@ -1,28 +1,26 @@
 <template>
-  <transition name="slide-fade">
-    <teleport to="body">
-      <section v-if="close" @click="close">
-        <div class="bg-gray-400 w-screen h-screen fixed top-0 opacity-50 z-20"></div>
-      </section>
-      <section class="absolute inset-0">
-        <div class="flex h-1/2">
-          <div class="m-auto shadow bg-white p-2 rounded w-1/3 z-30">
-            <div class="border rounded p-2">
-              <section>
-                <h1 class="p-1 text-2xl text-green-400 text-center">
-                  {{ header }}
-                </h1>
-                <hr />
-                <div class="p-1 my-3">
-                  <slot> Your all the content will be gone here ....... </slot>
-                </div>
-              </section>
-            </div>
+  <teleport to="body">
+    <section v-if="close" @click="close">
+      <div class="bg-gray-400 w-screen h-screen fixed top-0 opacity-50 z-20"></div>
+    </section>
+    <section class="absolute inset-0">
+      <div class="flex h-screen">
+        <div class="m-auto shadow bg-white p-2 rounded w-1/3 z-30">
+          <div class="border rounded p-2">
+            <section>
+              <h1 class="p-1 text-2xl text-green-400 text-center">
+                {{ header }}
+              </h1>
+              <hr />
+              <div class="p-1 my-3">
+                <slot> Your all the content will be gone here ....... </slot>
+              </div>
+            </section>
           </div>
         </div>
-      </section>
-    </teleport>
-  </transition>
+      </div>
+    </section>
+  </teleport>
 </template>
 
 <script>
@@ -34,7 +32,7 @@ export default {
     },
   },
   setup(_, context) {
-    const close = () => context.emit("isClose");
+    const close = () => context.emit("close");
     return { close };
   },
 };
@@ -97,8 +95,8 @@ export default {
 .m-auto {
   margin: auto;
 }
-.h-1\/2 {
-  height: 50%;
+.h-screen {
+  height: 100vh;
 }
 .flex {
   display: flex;

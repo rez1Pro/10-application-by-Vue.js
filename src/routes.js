@@ -7,44 +7,61 @@ import NameList from "./apps/NameList.vue";
 import Sliders from "./apps/Sliders.vue";
 import UserCrud from "./apps/UserCrud.vue";
 import Modals from "./components/ReuseableModals.vue";
-import { userInfo } from './store/userInfo';
+
 
 export const routes = [
      {
           path: '/',
-          component: Home
+          name: 'home',
+          component: Home,
+          meta : {requireAuth : false}
      },
      {
           path: '/name-list',
-          component: NameList
+          name: 'listing',
+          component: NameList,
+          meta : {requireAuth : false}
      },
      {
           path: '/calendar',
-          component: Calendar
+          name: 'calendar',
+          component: Calendar, 
+          meta : {requireAuth : false}
      },
      {
           path: '/markdown',
-          component: Markdown
+          name: 'markdown',
+          component: Markdown, 
+          meta : {requireAuth : false}
      },
      {
           path: '/sliders',
-          component: Sliders
+          name: 'slider',
+          component: Sliders,
+          meta : {requireAuth : false}
      },
      {
           path: '/calculator',
-          component: Calculator
+          name: 'calculator',
+          component: Calculator, 
+          meta : {requireAuth : true}
      },
      {
           path: '/reuseable-modals',
-          component: Modals
+          name: 'modals',
+          component: Modals,
+          meta : {requireAuth : false}
      },
      {
           path: '/realtime-chatting',
+          name: 'realtime-chatting',
           component: Chat,
-          beforeEnter: (_, __, next) => userInfo.state.isLoggedIn == true ? next() : next('/') (window.toastr.warning('You Should Logged In First'))
+          meta : {requireAuth : true}
      },
      {
           path: '/user-crud',
-          component: UserCrud
+          name: 'user-crud',
+          component: UserCrud,
+          meta : {requireAuth : false}
      },
 ]
